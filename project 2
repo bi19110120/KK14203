@@ -18,12 +18,12 @@ import java.io.BufferedReader;
 import java.io.IOException;
 
  class NamePanel extends JPanel {
-     JLabel header;
-     JLabel nameprovider;
-     JLabel name;
-     JTextField namefield;
-     JToggleButton done;
-    JTextArea jcomp1;
+    private JLabel header;
+    private JLabel nameprovider;
+    private JLabel name;
+    private JTextField namefield;
+    private JToggleButton done;
+    private JTextArea jcomp1;
      Border border = BorderFactory.createLineBorder(Color.PINK, 1);
       String output="";
 
@@ -132,10 +132,10 @@ import java.io.IOException;
     
    
     class StatusPanel extends JPanel {
-     JLabel statuslbl;
-     JLabel statuscheck;
-    JComboBox <String> selection;
-    JTextArea statuslb;
+    private JLabel statuslbl;
+    private JLabel statuscheck;
+   private JComboBox <String> selection;
+   private JTextArea statuslb;
    String output ="";
     public StatusPanel(JFrame frame) {
         //construct preComponents
@@ -194,15 +194,15 @@ import java.io.IOException;
         
          
       class  DineInPanel extends JPanel {
-              JLabel dinein_chck;
-              JLabel temp_lbl;
-              JTextField tempfield;
-              JButton submit_btn;
-              JButton finish_btn;
-              JLabel notabel;
-              JTextField tablelbl;
-              JButton nooftable;
-              JTextArea dinein;
+            private  JLabel dinein_chck;
+             private JLabel temp_lbl;
+             private JTextField tempfield;
+             private JButton submit_btn;
+             private JButton finish_btn;
+             private JLabel notabel;
+             private JTextField tablelbl;
+             private JButton nooftable;
+             private JTextArea dinein;
 
        public DineInPanel(JFrame frame) {
         //construct components
@@ -346,13 +346,13 @@ import java.io.IOException;
         }
         
      class TakeAwayPanel extends JPanel {
-     JLabel takeawaylbl;
-     JLabel patientlylbl;
-     JLabel turnlbl;
-     JTextField turn;
-     JButton generatebtn;
-     JButton finish_btn2;
-     JTextArea takeaway;
+    private JLabel takeawaylbl;
+    private JLabel patientlylbl;
+    private  JLabel turnlbl;
+    private JTextField turn;
+    private JButton generatebtn;
+     private JButton finish_btn2;
+    private  JTextArea takeaway;
     String output ="";
     public TakeAwayPanel(JFrame frame) {
         //construct components
@@ -459,13 +459,13 @@ import java.io.IOException;
 } 
     
      class DeliveryPanel extends JPanel {
-     JLabel dliverylbl;
-     JLabel addrlbl;
-     JTextField addressfield;
-     JLabel phonenolbl;
-     JTextField phonenumber;
-     JButton finishbutton;
-      JTextArea delivery;
+   private  JLabel dliverylbl;
+    private JLabel addrlbl;
+    private JTextField addressfield;
+    private JLabel phonenolbl;
+    private JTextField phonenumber;
+    private JButton finishbutton;
+    private  JTextArea delivery;
     String output ="";
 
     public DeliveryPanel(JFrame frame) {
@@ -575,50 +575,52 @@ import java.io.IOException;
     
     
  class MenuPanel extends JPanel {
-     JLabel menulbl;
-     JLabel foodlbl;
-     JLabel drinkslbl;
-     JLabel f1lbl;
-     JLabel f2lbl;
-     JLabel f3lbl;
-     JLabel foodprlbl;
-     JLabel drinkprice;
-     JLabel pf1lbl;
-     JLabel pf2lbl;
-     JLabel pf3lbl;
-     JLabel d1lbl;
-     JLabel d2lbl;
-     JLabel jcomp14;
-     JLabel pd1lbl;
-     JLabel pd2lbl;
-     JLabel pd3lbl;
-     JLabel d4lbl;
-     JLabel d5lbl;
-     JLabel pd4lbl;
-     JLabel pd5lbl;
-     JLabel totallbl;
-     JTextField jcomp23;
-     JButton okbtn;
-     JLabel quantityfood;
-     JLabel quantitydrink;
-     JTextField f1;
-     JTextField f2;
-     JTextField f3;
-     JTextField d1;
-     JTextField d2;
-     JTextField d3;
-     JTextField d4;
-     JTextField d5;
-     JLabel totaltaxlbl;
-    JTextField totaltax;
-    JLabel balancelbl;
-    JTextField balancetext;
-    JTextField moneytext;
-    JLabel moneylbl;
-    JButton pay;
-    JButton cardoption;
-    JButton gofeedback;
-     JTextArea output_field;
+  
+  private JLabel menulbl;
+  private   JLabel foodlbl;
+  private   JLabel drinkslbl;
+   private  JLabel f1lbl;
+    private JLabel f2lbl;
+   private  JLabel f3lbl;
+   private  JLabel foodprlbl;
+   private  JLabel drinkprice;
+   private  JLabel pf1lbl;
+   private  JLabel pf2lbl;
+   private  JLabel pf3lbl;
+   private  JLabel d1lbl;
+   private  JLabel d2lbl;
+   private  JLabel jcomp14;
+   private  JLabel pd1lbl;
+   private  JLabel pd2lbl;
+    private JLabel pd3lbl;
+    private JLabel d4lbl;
+   private  JLabel d5lbl;
+   private  JLabel pd4lbl;
+   private  JLabel pd5lbl;
+   private  JLabel totallbl;
+   private  JTextField jcomp23;
+   private  JButton okbtn;
+   private  JLabel quantityfood;
+   private  JLabel quantitydrink;
+   private  JTextField f1;
+   private  JTextField f2;
+   private  JTextField f3;
+   private  JTextField d1;
+    private JTextField d2;
+    private JTextField d3;
+    private JTextField d4;
+    private JTextField d5;
+    private JLabel totaltaxlbl;
+   private JTextField totaltax;
+   private JLabel balancelbl;
+   private JTextField balancetext;
+   private JTextField moneytext;
+   private JLabel moneylbl;
+   private JButton pay;
+   private JButton cardoption;
+   private JButton gofeedback;
+   private  JTextArea output_field;
+   private JButton clear;
     
     String output="";
     String filePath="data.txt";
@@ -669,6 +671,7 @@ import java.io.IOException;
         cardoption = new JButton ("Click here if you want to pay with Credit/Debit Card");
         gofeedback = new JButton ("Make a feedback");
         output_field = new JTextArea(5,5);
+        clear = new JButton ("clear");
         output_field.setPreferredSize(new Dimension(15, 20));
 
         //adjust size and set layout
@@ -720,7 +723,7 @@ import java.io.IOException;
         add (cardoption);
         add (gofeedback);
          add (output_field);
-
+         add(clear);
         //set component bounds (only needed by Absolute Positioning)
         menulbl.setBounds (435, 20, 100, 25);
         foodlbl.setBounds (160, 95, 100, 25);
@@ -766,8 +769,25 @@ import java.io.IOException;
        cardoption.setBounds (205, 505, 460, 45);
         gofeedback.setBounds (740, 515, 195, 35);
          output_field.setBounds (20, 220, 170, 175);
-        
-     
+         clear.setBounds (20, 525, 105, 25);
+         
+          clear.addActionListener(new ActionListener(){  
+         public void actionPerformed(ActionEvent e){  
+            moneytext.setText("");  
+            balancetext.setText("");
+            totaltax.setText(""); 
+            f1.setText("");
+            f2.setText("");
+            f3.setText("");
+            d1.setText("");
+            d2.setText("");
+            d3.setText("");
+            d4.setText("");
+            d5.setText("");
+            output_field.setText("");
+            jcomp23.setText("");
+         }  
+      });
         
         okbtn.addActionListener (new ActionListener(){
         public void actionPerformed (ActionEvent e) {
@@ -837,17 +857,24 @@ import java.io.IOException;
       if (  f1.getText().equals("") || f2.getText().equals("") || f3.getText().equals("") || d1.getText().equals("") || d2.getText().equals("")||d3.getText().equals("")||d4.getText().equals("")||d5.getText().equals("")){
        JOptionPane.showMessageDialog (null, "Please make sure to fill in the menu  before you proceed with the payment");
        }
-      else if (moneytext.getText()!=""){
-      JOptionPane.showMessageDialog(null, "You have already chose to pay with cash, you can not pay two times");
-      }
-       else{ 
-       frame.getContentPane().removeAll();
+        if (moneytext.getText()!=""){
+        frame.getContentPane().removeAll();
                frame.getContentPane().add (new CreditDebitPanel(frame));             
                frame.pack();
                frame.setVisible (true);
+      
+       }
+       
+       else { 
+        JOptionPane.showMessageDialog (null, "You've already paid");
+       
                }
                }
                });
+               
+     
+     
+      
                
       gofeedback.addActionListener (new ActionListener (){
       public void actionPerformed (ActionEvent b){
@@ -921,21 +948,22 @@ import java.io.IOException;
     
    
  class CreditDebitPanel extends JPanel {
-     JLabel creditdebitlbl;
-     JLabel fname;
-     JLabel lastnsme;
-     JLabel cardnum;
-     JLabel expired;
-     JTextField fnamee;
-     JTextField lnamee;
-     JTextField cardd;
-     JComboBox <String> year ;
-     JComboBox <String> month ;
-     JLabel cvv;
-     JTextField cvvtext;
-     JButton finishh;
-     JButton finish3;
-      JTextArea credit;
+   private  JLabel creditdebitlbl;
+   private  JLabel fname;
+   private  JLabel lastnsme;
+   private  JLabel cardnum;
+   private  JLabel expired;
+   private  JTextField fnamee;
+   private  JTextField lnamee;
+    private JTextField cardd;
+    private JComboBox <String> year ;
+    private JComboBox <String> month ;
+    private JLabel cvv;
+    private JTextField cvvtext;
+    private JButton finishh;
+    private JButton finish3;
+     private JTextArea credit;
+       private JButton clear;
    String output = "";
     public CreditDebitPanel(JFrame frame) {
         //construct preComponents
@@ -956,8 +984,9 @@ import java.io.IOException;
         cvv = new JLabel ("CVV");
         cvvtext = new JTextField (5);
           credit = new JTextArea (5, 5);
-        
+              clear = new JButton ("clear");
         finishh = new JButton ("Finish");
+        
         finish3 = new JButton ("Give a feedback");
 
         //adjust size and set layout
@@ -980,6 +1009,8 @@ import java.io.IOException;
         add (finishh);
         add (finish3);
           add (credit);
+        add(clear);
+        
         
        
 
@@ -999,31 +1030,35 @@ import java.io.IOException;
         finishh.setBounds (395, 335, 100, 25);
         finish3.setBounds (400, 495, 200, 25);
        credit.setBounds (765, 120, 170, 255);
-    
+     clear.setBounds (20, 525, 105, 25);
+     
+       clear.addActionListener(new ActionListener(){  
+         public void actionPerformed(ActionEvent e){  
+            fnamee.setText("");  
+            lnamee.setText("");
+            cardd.setText(""); 
+            cvv.setText("");
+            year.setSelectedIndex(0);
+            month.setSelectedIndex(0);
+
+         }  
+      });
+
+     
         
         finishh.addActionListener (new ActionListener(){
         public void actionPerformed (ActionEvent e){
         if (fnamee.getText().equals("") || lnamee.getText().equals("") || cardd.getText().equals("")|| year.getSelectedItem().equals("[YEAR]") || month.getSelectedItem().equals ("[MONTH]") || cvvtext.getText().equals("")){
         JOptionPane.showMessageDialog(null,"Please make sure to fill in everything");
         }
-        
-      
-        int card = Integer.parseInt (cardd.getText());
-        String c = cardd.getText();
-        int cvv = Integer.parseInt (cvvtext.getText());
-        String v = cvvtext.getText();
-        
-         if(v.length()<3 || v.length()>3) {
-         JOptionPane.showMessageDialog (null, "Please make sure you key in the correct cvv");
-        
-        }
-         if(c.length()<16 || c.length()>16) {
-        JOptionPane.showMessageDialog (null, "Please make sure you enter the correct card number"); 
-        
-        }
-        
+       
         }
         });
+        
+         
+        
+     
+        
         
          finish3.addActionListener (new ActionListener(){
         public void actionPerformed (ActionEvent e){
@@ -1031,11 +1066,11 @@ import java.io.IOException;
          JOptionPane.showMessageDialog (null,"Make sure you have already key in all inputs before you proceed");
          }
          else{
-          if(printOutput()){
+             if(printOutput()){
           writeInput();
           JOptionPane.showMessageDialog(null,"Successfully Save");
           }
-              frame.getContentPane().removeAll();
+               frame.getContentPane().removeAll();
                frame.getContentPane().add (new FeedbackPanel(frame));             
                frame.pack();
                frame.setVisible (true);
@@ -1043,9 +1078,10 @@ import java.io.IOException;
                }
                });
         
+}
 
         
-        }
+        
       public boolean printOutput(){
       
       output +=  "First name : " +fnamee.getText();
@@ -1090,14 +1126,14 @@ import java.io.IOException;
         }
         
      class FeedbackPanel extends JPanel {
-    JLabel fblbl;
-    JLabel ratelbl;
-    JRadioButton goodlbl;
-    JRadioButton finelbl;
-    JRadioButton badlbl;
-    JButton rtelbl;
-     JTextArea feedback;
-      JButton load;
+  private  JLabel fblbl;
+  private  JLabel ratelbl;
+  private  JRadioButton goodlbl;
+  private  JRadioButton finelbl;
+  private  JRadioButton badlbl;
+  private  JButton rtelbl;
+  private   JTextArea feedback;
+  private    JButton load;
      
     String output="";
     String filePath="data.txt";
@@ -1207,10 +1243,10 @@ import java.io.IOException;
     }
           
   class load extends JPanel{
-    JLabel title ;
-    JLabel p;
-   JScrollPane jsp;
-   Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
+   private JLabel title ;
+   private JLabel p;
+   private JScrollPane jsp;
+   private Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
 
    public load(){
       title = new JLabel("Purr Cafe Record");
