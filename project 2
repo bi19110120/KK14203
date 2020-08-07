@@ -101,30 +101,30 @@ import java.io.IOException;
       BufferedWriter br = null;
       String data="";
       try {
-			reader = new BufferedReader(new FileReader("purrcafe.txt"));
-			String line = reader.readLine();
-			while (line != null) {
-				data += line+"\n";
-				line = reader.readLine();
-			}
-			reader.close();
-		} catch (IOException io) {
+         reader = new BufferedReader(new FileReader("purrcafe.txt"));
+         String line = reader.readLine();
+         while (line != null) {
+            data += line+"\n";
+            line = reader.readLine();
+         }
+         reader.close();
+      } catch (IOException io) {
          jcomp1.setText(io.toString());
-		}
+      }
 
       String input = "Name :" +namefield.getText() ;
-      		try {
-			br = new BufferedWriter(new FileWriter("purrcafe.txt"));
+            try {
+         br = new BufferedWriter(new FileWriter("purrcafe.txt"));
          br.write(data+input);
-		} catch (IOException e) {			
+      } catch (IOException e) {        
          jcomp1.setText(e.toString());
-		} finally {
-			try {
-				br.close();
-			} catch (IOException e) {
-				jcomp1.setText(e.toString());
-			}
-		}
+      } finally {
+         try {
+            br.close();
+         } catch (IOException e) {
+            jcomp1.setText(e.toString());
+         }
+      }
     }
 }
     
@@ -314,30 +314,30 @@ import java.io.IOException;
       BufferedWriter br = null;
       String data="";
       try {
-			reader = new BufferedReader(new FileReader("purrcafe.txt"));
-			String line = reader.readLine();
-			while (line != null) {
-				data += line+"\n";
-				line = reader.readLine();
-			}
-			reader.close();
-		} catch (IOException io) {
+         reader = new BufferedReader(new FileReader("purrcafe.txt"));
+         String line = reader.readLine();
+         while (line != null) {
+            data += line+"\n";
+            line = reader.readLine();
+         }
+         reader.close();
+      } catch (IOException io) {
          dinein.setText(io.toString());
-		}
+      }
 
       String input = "No.of table " + tablelbl.getText() +  " Temperature " + tempfield.getText();
-      		try {
-			br = new BufferedWriter(new FileWriter("purrcafe.txt"));
+            try {
+         br = new BufferedWriter(new FileWriter("purrcafe.txt"));
          br.write(data+input);
-		} catch (IOException e) {			
+      } catch (IOException e) {        
          dinein.setText(e.toString());
-		} finally {
-			try {
-				br.close();
-			} catch (IOException e) {
-				dinein.setText(e.toString());
-			}
-		}
+      } finally {
+         try {
+            br.close();
+         } catch (IOException e) {
+            dinein.setText(e.toString());
+         }
+      }
     }
 }
          
@@ -431,30 +431,30 @@ import java.io.IOException;
       BufferedWriter br = null;
       String data="";
       try {
-			reader = new BufferedReader(new FileReader("purrcafe.txt"));
-			String line = reader.readLine();
-			while (line != null) {
-				data += line+"\n";
-				line = reader.readLine();
-			}
-			reader.close();
-		} catch (IOException io) {
+         reader = new BufferedReader(new FileReader("purrcafe.txt"));
+         String line = reader.readLine();
+         while (line != null) {
+            data += line+"\n";
+            line = reader.readLine();
+         }
+         reader.close();
+      } catch (IOException io) {
          takeaway.setText(io.toString());
-		}
+      }
 
       String input = "Turn : " +turn.getText();
-      		try {
-			br = new BufferedWriter(new FileWriter("purrcafe.txt"));
+            try {
+         br = new BufferedWriter(new FileWriter("purrcafe.txt"));
          br.write(data+input);
-		} catch (IOException e) {			
+      } catch (IOException e) {        
          takeaway.setText(e.toString());
-		} finally {
-			try {
-				br.close();
-			} catch (IOException e) {
-				takeaway.setText(e.toString());
-			}
-		}
+      } finally {
+         try {
+            br.close();
+         } catch (IOException e) {
+            takeaway.setText(e.toString());
+         }
+      }
     }
 } 
     
@@ -523,7 +523,7 @@ import java.io.IOException;
                }
         
        } catch (NumberFormatException ae) {
-       JOptionPane.showMessageDialog (null, "Please make sure you have key in everything before you proceed");
+       JOptionPane.showMessageDialog (null, "Please make sure you key in the correct input");
        }
        
                }
@@ -545,30 +545,30 @@ import java.io.IOException;
       BufferedWriter br = null;
       String data="";
       try {
-			reader = new BufferedReader(new FileReader("purrcafe.txt"));
-			String line = reader.readLine();
-			while (line != null) {
-				data += line+"\n";
-				line = reader.readLine();
-			}
-			reader.close();
-		} catch (IOException io) {
+         reader = new BufferedReader(new FileReader("purrcafe.txt"));
+         String line = reader.readLine();
+         while (line != null) {
+            data += line+"\n";
+            line = reader.readLine();
+         }
+         reader.close();
+      } catch (IOException io) {
          delivery.setText(io.toString());
-		}
+      }
 
       String input = "Phone Number : "  +phonenumber.getText()+ "Address " +addressfield.getText();
-      		try {
-			br = new BufferedWriter(new FileWriter("purrcafe.txt"));
+            try {
+         br = new BufferedWriter(new FileWriter("purrcafe.txt"));
          br.write(data+input);
-		} catch (IOException e) {			
+      } catch (IOException e) {        
          delivery.setText(e.toString());
-		} finally {
-			try {
-				br.close();
-			} catch (IOException e) {
-				delivery.setText(e.toString());
-			}
-		}
+      } finally {
+         try {
+            br.close();
+         } catch (IOException e) {
+            delivery.setText(e.toString());
+         }
+      }
     }
 } 
     
@@ -854,15 +854,14 @@ import java.io.IOException;
     
     cardoption.addActionListener (new ActionListener(){
     public void actionPerformed (ActionEvent b){
-      if (  f1.getText().equals("") || f2.getText().equals("") || f3.getText().equals("") || d1.getText().equals("") || d2.getText().equals("")||d3.getText().equals("")||d4.getText().equals("")||d5.getText().equals("")){
-       JOptionPane.showMessageDialog (null, "Please make sure to fill in the menu  before you proceed with the payment");
+      if (  f1.getText().equals("") || f2.getText().equals("") || f3.getText().equals("") || d1.getText().equals("") || d2.getText().equals("")||d3.getText().equals("")||d4.getText().equals("")||d5.getText().equals("")||totaltax.getText().equals("")||jcomp23.getText().equals("")){
+       JOptionPane.showMessageDialog (null, "Please make sure to fill in the menu  before you proceed with the payment and make sure to press ok to see the total you have to pay");
        }
-        if (moneytext.getText()!=""){
+       else if (moneytext.getText()!=""){
         frame.getContentPane().removeAll();
                frame.getContentPane().add (new CreditDebitPanel(frame));             
                frame.pack();
-               frame.setVisible (true);
-      
+              frame.setVisible (true);
        }
        
        else { 
@@ -916,30 +915,30 @@ import java.io.IOException;
       BufferedWriter br = null;
       String data="";
       try {
-			reader = new BufferedReader(new FileReader("purrcafe.txt"));
-			String line = reader.readLine();
-			while (line != null) {
-				data += line+"\n";
-				line = reader.readLine();
-			}
-			reader.close();
-		} catch (IOException io) {
+         reader = new BufferedReader(new FileReader("purrcafe.txt"));
+         String line = reader.readLine();
+         while (line != null) {
+            data += line+"\n";
+            line = reader.readLine();
+         }
+         reader.close();
+      } catch (IOException io) {
          output_field.setText(io.toString());
-		}
+      }
 
       String input = "total spent:" +totaltax.getText() + "total paid:  " + moneytext.getText() + "balance : " + balancetext.getText()  ;
-      		try {
-			br = new BufferedWriter(new FileWriter("purrcafe.txt"));
+            try {
+         br = new BufferedWriter(new FileWriter("purrcafe.txt"));
          br.write(data+input);
-		} catch (IOException e) {			
+      } catch (IOException e) {        
          output_field.setText(e.toString());
-		} finally {
-			try {
-				br.close();
-			} catch (IOException e) {
-				output_field.setText(e.toString());
-			}
-		}
+      } finally {
+         try {
+            br.close();
+         } catch (IOException e) {
+            output_field.setText(e.toString());
+         }
+      }
     }
 }
             
@@ -960,7 +959,6 @@ import java.io.IOException;
     private JComboBox <String> month ;
     private JLabel cvv;
     private JTextField cvvtext;
-    private JButton finishh;
     private JButton finish3;
      private JTextArea credit;
        private JButton clear;
@@ -985,9 +983,8 @@ import java.io.IOException;
         cvvtext = new JTextField (5);
           credit = new JTextArea (5, 5);
               clear = new JButton ("clear");
-        finishh = new JButton ("Finish");
         
-        finish3 = new JButton ("Give a feedback");
+        finish3 = new JButton ("Make a feedback");
 
         //adjust size and set layout
         setPreferredSize (new Dimension (944, 563));
@@ -1006,7 +1003,6 @@ import java.io.IOException;
         add (month);
         add (cvv);
         add (cvvtext);
-        add (finishh);
         add (finish3);
           add (credit);
         add(clear);
@@ -1027,7 +1023,6 @@ import java.io.IOException;
         month.setBounds (195, 210, 100, 25);
         cvv.setBounds (100, 245, 100, 25);
         cvvtext.setBounds (190, 250, 100, 25);
-        finishh.setBounds (395, 335, 100, 25);
         finish3.setBounds (400, 495, 200, 25);
        credit.setBounds (765, 120, 170, 255);
      clear.setBounds (20, 525, 105, 25);
@@ -1037,7 +1032,7 @@ import java.io.IOException;
             fnamee.setText("");  
             lnamee.setText("");
             cardd.setText(""); 
-            cvv.setText("");
+            cvvtext.setText("");
             year.setSelectedIndex(0);
             month.setSelectedIndex(0);
 
@@ -1046,20 +1041,10 @@ import java.io.IOException;
 
      
         
-        finishh.addActionListener (new ActionListener(){
-        public void actionPerformed (ActionEvent e){
-        if (fnamee.getText().equals("") || lnamee.getText().equals("") || cardd.getText().equals("")|| year.getSelectedItem().equals("[YEAR]") || month.getSelectedItem().equals ("[MONTH]") || cvvtext.getText().equals("")){
-        JOptionPane.showMessageDialog(null,"Please make sure to fill in everything");
-        }
-       
-        }
-        });
-        
          
         
      
-        
-        
+ 
          finish3.addActionListener (new ActionListener(){
         public void actionPerformed (ActionEvent e){
         if (fnamee.getText().equals("") || lnamee.getText().equals("") || cardd.getText().equals("")|| year.getSelectedItem().equals("[YEAR]") || month.getSelectedItem().equals ("[MONTH]") || cvvtext.getText().equals("")){
@@ -1084,10 +1069,10 @@ import java.io.IOException;
         
       public boolean printOutput(){
       
-      output +=  "First name : " +fnamee.getText();
-      output += "Last name : " +lnamee.getText();
-      output += "Card Number : " +cardd.getText();
-      output += "CVV : " +cvvtext.getText();
+      output +=  "First name : " +fnamee.getText()+ "\n";
+      output += "Last name : " +lnamee.getText()+ "\n";
+      output += "Card Number : " +cardd.getText()+"\n";
+      output += "CVV : " +cvvtext.getText()+"\n";
      
       credit.setText(output);
       return true;
@@ -1098,30 +1083,30 @@ import java.io.IOException;
       BufferedWriter br = null;
       String data="";
       try {
-			reader = new BufferedReader(new FileReader("purrcafe.txt"));
-			String line = reader.readLine();
-			while (line != null) {
-				data += line+"\n";
-				line = reader.readLine();
-			}
-			reader.close();
-		} catch (IOException io) {
+         reader = new BufferedReader(new FileReader("purrcafe.txt"));
+         String line = reader.readLine();
+         while (line != null) {
+            data += line+"\n";
+            line = reader.readLine();
+         }
+         reader.close();
+      } catch (IOException io) {
          credit.setText(io.toString());
-		}
+      }
 
       String input = "First Name : " +fnamee.getText() + "Last Name " +lnamee.getText() + "Card Number " +cardd.getText() + "Expiry Date : Year " +year.getSelectedItem()+ " CVV " +cvvtext.getText();
-      		try {
-			br = new BufferedWriter(new FileWriter("purrcafe.txt"));
+            try {
+         br = new BufferedWriter(new FileWriter("purrcafe.txt"));
          br.write(data+input);
-		} catch (IOException e) {			
+      } catch (IOException e) {        
          credit.setText(e.toString());
-		} finally {
-			try {
-				br.close();
-			} catch (IOException e) {
-				credit.setText(e.toString());
-			}
-		}
+      } finally {
+         try {
+            br.close();
+         } catch (IOException e) {
+            credit.setText(e.toString());
+         }
+      }
     }
         }
         
@@ -1131,7 +1116,6 @@ import java.io.IOException;
   private  JRadioButton goodlbl;
   private  JRadioButton finelbl;
   private  JRadioButton badlbl;
-  private  JButton rtelbl;
   private   JTextArea feedback;
   private    JButton load;
      
@@ -1143,7 +1127,6 @@ import java.io.IOException;
         //construct components
         fblbl = new JLabel ("Feedback");
         ratelbl = new JLabel ("How woulf you rate us?");
-       rtelbl = new JButton ("Done");
          load = new JButton ("Load Data");
       
         goodlbl = new JRadioButton ("Very Good :D");
@@ -1203,7 +1186,6 @@ import java.io.IOException;
         add (goodlbl);
         add (finelbl);
         add (badlbl);
-        add (rtelbl);
         add(load);
 
         //set component bounds (only needed by Absolute Positioning)
@@ -1212,29 +1194,24 @@ import java.io.IOException;
         goodlbl.setBounds (180, 170, 100, 25);
         finelbl.setBounds (375, 170, 100, 25);
         badlbl.setBounds (585, 170, 100, 25);
-        rtelbl.setBounds (380, 230, 100, 25);
         load.setBounds (345, 430, 205, 45);
         
           load.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
+              if(rb_selection.equals("")){
+         JOptionPane.showMessageDialog (null, "Please select your feedback before you want to load your data");
+         }
+         else{
              frame.getContentPane().removeAll();
                frame.getContentPane().add (new load());             
                frame.pack();
                frame.setVisible (true);
                }
 
-            
+           } 
          });
         
-        rtelbl.addActionListener (new ActionListener () {
-        public void actionPerformed (ActionEvent e){
-        if(rb_selection.equals("")){
-         JOptionPane.showMessageDialog (null, "Please select your feedback");
-        }
        
-        }
-             });
-           
           
        
         
@@ -1264,16 +1241,16 @@ import java.io.IOException;
       p.setBounds(45, 50, 500, 205);
       BufferedReader reader;
       try {
-			   reader = new BufferedReader(new FileReader("purrcafe.txt"));
-		      String line = reader.readLine();
+            reader = new BufferedReader(new FileReader("purrcafe.txt"));
+            String line = reader.readLine();
             while (line != null) {
             output += line+"<br>";
             line = reader.readLine();
-			}
+         }
             reader.close();
-		      } catch (IOException io) {
-		      	JOptionPane.showMessageDialog(null,io.toString());
-		      }
+            } catch (IOException io) {
+               JOptionPane.showMessageDialog(null,io.toString());
+            }
             p.setText(output);
    }
 }
