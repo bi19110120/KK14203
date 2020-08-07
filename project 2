@@ -1198,15 +1198,14 @@ import java.io.IOException;
         
           load.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-              if(rb_selection.equals("")){
-         JOptionPane.showMessageDialog (null, "Please select your feedback before you want to load your data");
-         }
-         else{
+      
+         
+        
              frame.getContentPane().removeAll();
                frame.getContentPane().add (new load());             
                frame.pack();
                frame.setVisible (true);
-               }
+               
 
            } 
          });
