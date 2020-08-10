@@ -1234,21 +1234,18 @@ import java.io.IOException;
      setPreferredSize (new Dimension (944, 563));
       setLayout (null);
       
-     // title.setBorder(border);
-     // title.setHorizontalAlignment(JLabel.CENTER);
-      
-    //  jsp = new JScrollPane(p);
+  
+
       String output="";
       
       add (title);
       add (p);
-     // add (jsp);
+    
       
         title.setBounds (380, 10, 120, 40);
         p.setBounds (20, 45, 915, 500);
       
-    //  title.setBounds(10, 250, 203, 30);
-    //  p.setBounds(46, 50, 10, 205);
+
       BufferedReader read =null;
       try {
             read = new BufferedReader(new FileReader("purrcafe.txt"));
