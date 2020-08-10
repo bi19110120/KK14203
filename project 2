@@ -1220,39 +1220,55 @@ import java.io.IOException;
           
   class load extends JPanel{
    private JLabel title ;
-   private JLabel p;
-   private JScrollPane jsp;
-   private Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
+   private JTextArea p;
+  // private JScrollPane jsp;
+   // Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
 
    public load(){
-      title = new JLabel("Purr Cafe Record");
-      p = new JLabel("");
-      p.setPreferredSize(new Dimension(667, 366));
-      p.setBorder(border);
-      p.setVerticalAlignment(JLabel.TOP);
-      jsp = new JScrollPane(p);
-      String output="<html>";
+   	
+      
+      JLabel title = new JLabel("Purr Cafe Record");
+      p = new JTextArea(5, 5);
+    
+      
+     setPreferredSize (new Dimension (944, 563));
+      setLayout (null);
+      
+     // title.setBorder(border);
+     // title.setHorizontalAlignment(JLabel.CENTER);
+      
+    //  jsp = new JScrollPane(p);
+      String output="";
+      
       add (title);
       add (p);
-      add (jsp);
+     // add (jsp);
       
-      title.setBounds(210, 10, 200, 25);
-      p.setBounds(45, 50, 500, 205);
-      BufferedReader reader;
+        title.setBounds (380, 10, 120, 40);
+        p.setBounds (20, 45, 915, 500);
+      
+    //  title.setBounds(10, 250, 203, 30);
+    //  p.setBounds(46, 50, 10, 205);
+      BufferedReader read =null;
       try {
-            reader = new BufferedReader(new FileReader("purrcafe.txt"));
-            String line = reader.readLine();
+            read = new BufferedReader(new FileReader("purrcafe.txt"));
+            String line = read.readLine();
             while (line != null) {
-            output += line+"<br>";
-            line = reader.readLine();
-         }
-            reader.close();
-            } catch (IOException io) {
-               JOptionPane.showMessageDialog(null,io.toString());
+            output += line+"\n";
+            line = read.readLine();
+         
+            } 
+            
+            }catch (IOException e) {
+            p.setText(e.toString());
+            
             }
-            p.setText(output);
+            p.setText (output);
+     
+            
    }
 }
+
    public class OrderingRecordGUI {
     public static void main (String[] args) {
     
