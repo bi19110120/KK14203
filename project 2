@@ -899,10 +899,17 @@ import java.io.IOException;
     
     
     public boolean printOutput(){
-      output = "<html>";
-      output += "Thank you for ordering\n";
+
+      output+="Burger : "+f1.getText()+"\n ";
+      output+="Spaghetti : "+f2.getText()+"\n ";
+      output+="Fried Chicken : "+f3.getText()+"\n";
+      output+="Cola :" +d1.getText()+"\n ";
+      output+="Pepsi :"+d2.getText()+"\n ";
+      output+="Sprite :"+d3.getText()+"\n ";
+      output+="Tea :"+d4.getText()+"\n ";
+      output+="Coffee :"+d5.getText()+"\n";
       output += "Total inc tax:"+totaltax.getText()+"\n";
-      output += "Total You Paid"+moneytext.getText()+"\n";
+      output += "Total You Paid: "+moneytext.getText()+"\n";
       output += "Your Balance:"+balancetext.getText()+"\n";
         
       JOptionPane.showMessageDialog(null, "The data is saved successfully.",  "INFORMATION",JOptionPane.INFORMATION_MESSAGE); 
@@ -926,7 +933,7 @@ import java.io.IOException;
          output_field.setText(io.toString());
       }
 
-      String input = "total spent:" +totaltax.getText() + "total paid:  " + moneytext.getText() + "balance : " + balancetext.getText()  ;
+      String input ="burger: "+f1.getText()+"spaghetti :" +f2.getText()+ "fried chicken: "+f3.getText()+"cola :" +d1.getText()+"pepsi :"+d2.getText()+"sprite: "+d3.getText()+"tea :"+d4.getText()+"coffe: "+d5.getText()+"total spent:" +totaltax.getText() + "total paid:  " + moneytext.getText() + "balance : " + balancetext.getText()  ;
             try {
          br = new BufferedWriter(new FileWriter("purrcafe.txt"));
          br.write(data+input);
@@ -1221,11 +1228,10 @@ import java.io.IOException;
   class load extends JPanel{
    private JLabel title ;
    private JTextArea p;
-  // private JScrollPane jsp;
-   // Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
+
 
    public load(){
-   	
+      
       
       JLabel title = new JLabel("Purr Cafe Record");
       p = new JTextArea(5, 5);
@@ -1233,19 +1239,16 @@ import java.io.IOException;
       
      setPreferredSize (new Dimension (944, 563));
       setLayout (null);
-      
-  
-
+ 
       String output="";
       
       add (title);
       add (p);
-    
+  
       
         title.setBounds (380, 10, 120, 40);
         p.setBounds (20, 45, 915, 500);
-      
-
+    
       BufferedReader read =null;
       try {
             read = new BufferedReader(new FileReader("purrcafe.txt"));
@@ -1284,3 +1287,4 @@ import java.io.IOException;
     }   
        
     }
+
